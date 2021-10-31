@@ -1,0 +1,10 @@
+export const GET_EXTENSION_ID = "GET_EXTENSION_ID";
+export const EXTENSION_ID_RESULT = "EXTENSION_ID_RESULT";
+export const TOGGLE_POPUP_VIEW = "TOGGLE_POPUP_VIEW";
+export const SET_SEED_DATA = "SET_SEED_DATA";
+export const RECORD_DICE = "RECORD_DICE";
+export const RECORD_LIMBO = "RECORD_LIMBO";
+export const RECORD_CRASH = "RECORD_CRASH";
+export const LIMBO = "LIMBO";
+export const DICE = "DICE";
+export const CRASH = "CRASH";

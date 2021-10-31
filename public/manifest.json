@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "Seed Recorder",
+  "description": "Seed recorder to highlight playstyle",
+  "version": "1.0.0",
+  "homepage_url": "https://klaycer.dev",
+  "icons": {
+    "16": "iconrecord16.png",
+    "48": "iconrecord32.png",
+    "128": "iconrecord192.png"
+  },
+  "browser_action": {
+    "default_icon": "favicon_disabled.png",
+    "default_title": "Seed Recorder"
+  },
+  "background": {
+    "scripts": ["./jquery.js", "background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["*://*.stake.com/*"],
+    "all_frames": true,
+    "js": [
+      "./content.js",
+      "./jquery.js"
+    ],
+    "run_at": "document_end"
+  }],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "webRequest",
+    "*://*.stake.com/*"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "index.html",
+    "/static/*"
+  ]
+}

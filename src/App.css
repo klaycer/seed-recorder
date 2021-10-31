@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.crash-table .td-ltr{
+    -webkit-transform: rotate(-90deg);   
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.crash-table  tr {
+    border-radius: 20px;
+}
+
+.crash-table tr td:nth-child(1), .crash-table tr th:nth-child(1) {
+    border-radius: 0.625rem 0 0 0.625rem;
+}
+
+.crash-table tr td:nth-last-child(1), .crash-table tr th:nth-last-child(1) {
+    border-radius: 0 0.625rem 0.625rem 0;
+}
+
+.dropdown:focus-within .dropdown-menu {
+    opacity:1;
+    transform: translate(0) scale(1);
+    visibility: visible;
+}
